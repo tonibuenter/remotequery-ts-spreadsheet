@@ -1,0 +1,55 @@
+{
+  "name": "remotequery-ts-spreadsheet",
+  "version": "0.0.1",
+  "description": "Processing Spreadsheets with RemoteQuery",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint",
+    "build": "tsc ; npm run lint",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "test": "mocha -r ts-node/register 'test/**/*.ts' --timeout 100000  --exit",
+    "test-hello": "mocha -r ts-node/register 'test/hello-test.ts' --timeout 100000 --exit",
+    "simple-data-test": "mocha -r ts-node/register 'test/simple-data-test.ts' --timeout 100000 --exit",
+    "complex-data-test": "mocha -r ts-node/register 'test/complex-data-test.ts' --timeout 100000 --exit",
+    "spreadsheet-data-test": "mocha -r ts-node/register 'test/spreadsheet-data-test.ts' --timeout 100000 --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonibuenter/remotequery-ts-spreadsheet.git"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "keywords": [
+    "SQL",
+    "Processing",
+    "Spreadsheet"
+  ],
+  "author": "Toni A. Buenter",
+  "license": "ISC",
+  "dependencies": {
+    "remotequery-ts-common": "0.0.5",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.21",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.7.2",
+    "@typescript-eslint/eslint-plugin": "^4.29.3",
+    "@typescript-eslint/parser": "^4.29.3",
+    "chai": "^4.3.4",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.1",
+    "mocha": "10.4.0",
+    "prettier": "^2.3.2",
+    "remotequery-ts-mysql": "0.0.19",
+    "ts-node": "^10.2.1",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.3.5"
+  }
+}
